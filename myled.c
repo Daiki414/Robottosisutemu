@@ -10,7 +10,7 @@
 #include<linux/uaccess.h>
 #include<linux/io.h>
 
-MODULE_AUTHOR("Ryuichi Ueda & Ryoya Sato");
+MODULE_AUTHOR("Ryuichi Ueda & Ryoya Sato & Daiki Shimizu");
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
@@ -31,6 +31,10 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 		gpio_base[10] = 1 << 25;
 	}else if(c == '1'){
 		gpio_base[7] = 1 << 25;
+	}else if(c == '2'){
+		gpio_base[10] = 1 << 24;
+	}else if(c == '3'){
+		gpio_base[7] = 1 << 24;
 	}
 	return 1;
 }
@@ -87,6 +91,13 @@ static int __init init_mod(void)
 	const u32 mask = ~(0x7 << shift);
 
 	gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift);
+	
+	const u32 led1 = 24;
+	const u32 index1 = led1/10;
+	const u32 shift1 = (led1%10)*3;
+	const u32 mask1 = ~(0x7 << shift1);
+	
+	gpio_base[index1] = (gpio_base[index1] & mask1) | (0x1 << shift1);
 
 	return 0;
 }
