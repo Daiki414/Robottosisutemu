@@ -1,5 +1,5 @@
   //SPDX-License-Identifer: GPL-3.0
- //*Copyright (c) 2021 Ryuchi Ueda & Ryoya Sato. All rights resrved.
+ //*Copyright (c) 2021 Ryuchi Ueda & Ryoya Sato. & Daiki Shimizu All rights resrved.
 
 
 
