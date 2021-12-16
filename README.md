@@ -3,6 +3,12 @@
 ロボットシステム学2021  課題1
 ______
 
+# はじめに
+
+
+ 今回使用した、私のRaspberry Pi 4を私以外に佐藤涼耶君も使用しており、課題のmyledやREADMEなどをGitHubにpushするたびにPermission to Daiki414/Robottosisutemu.git denied to Ryoya1012.とErrorを常に出していており調べてもわからず、最終的に佐藤君にGitHub上に貼り付けてもらい、そこから、myledやREADEMEを直接編集させてもらいました。
+
+
 # 概要
 
 
@@ -29,6 +35,17 @@ ______
 ・LED(赤・黄)　×2
 
 ・抵抗200Ω ×２
+
+
+# 回路
+
+
+・今回、製作した回路の写真です。
+
+<img src=
+"https://user-images.githubusercontent.com/95708047/146393574-ff90f7f0-df81-4fb9-8d9c-1a060a62a350.jpg" 
+width="320px">
+
 
 
 # インストール・ビルド方法
